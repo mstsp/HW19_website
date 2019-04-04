@@ -1,0 +1,44 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        title= title
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/style.css')
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    body.body-contact
+        include ./header
+        .container-index
+        p.title-center Contact us
+        form.contact-form(method="post")
+            fieldset
+                label.form-label(for="name") Name:
+                br
+                input.form-input(name="name", type="text", placeholder="Enter your name", required="")
+                br
+                label.form-label(for="phone") Phone:
+                br
+                input.form-input(name="phone", type="text", placeholder="Enter your phone", required="")
+                br
+                label.form-label(for="email") Email:
+                br
+                input.form-input(name="email", type="email", placeholder="Enter your email", required="")
+                br   
+                label.form-label(for="message") Message:
+                br
+                input.form-inputMessage(name="message", type="text", placeholder="Enter your message")
+                br          
+       
+                button.form-button(type="submit") Send message
+
+        p.message(class=status === "ok" ? "": "hidden") Thank you very much! Your message was sent successfully.
+
+        ul.hmenu
+            li.horizontal
+                a.link(href="#", class="fab fa-instagram")
+            li.horizontal
+                a.link(href="#", class="fab fa-facebook")
+            li.horizontal
+                a.link(href="#", class="fab fa-youtube")
+            li.horizontal
+                a.link(href="#", class="fab fa-pinterest-square")
